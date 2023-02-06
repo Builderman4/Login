@@ -15,5 +15,16 @@ class ViewController: UIViewController {
     }
 
 
+    @IBOutlet var usernameTextField: UITextField!
+    
+    @IBAction func unwindToLogin(unwindSegue: UIStoryboardSegue) {
+        
+    }
+    
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     segue.destination.navigationItem.title = usernameTextField.text
+        
+    }
+    
 }
 
