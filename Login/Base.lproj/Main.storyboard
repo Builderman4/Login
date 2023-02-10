@@ -74,7 +74,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="bc1-rS-JHT"/>
                     <connections>
+                        <outlet property="forgotPassword" destination="1Xb-Oe-ioj" id="TL8-wU-seR"/>
+                        <outlet property="forgotUsername" destination="1Xj-sO-uzp" id="Skd-ii-XLY"/>
                         <outlet property="usernameTextField" destination="3Ws-Bd-JoT" id="3wC-7H-Xas"/>
+                        <segue destination="vxE-iK-Php" kind="show" id="WI3-Sh-T0N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -98,6 +101,9 @@
             <point key="canvasLocation" x="767" y="84"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="s9w-Dh-MgP"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
