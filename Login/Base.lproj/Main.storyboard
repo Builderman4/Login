@@ -37,9 +37,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="usernameTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="U0Z-u9-FEj"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kfi-OV-skQ">
                                 <rect key="frame" x="96" y="401" width="223" height="34"/>
@@ -52,12 +49,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Username?"/>
+                                <connections>
+                                    <action selector="forgotUsername:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rhS-aI-GRi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xb-Oe-ioj">
                                 <rect key="frame" x="254" y="534" width="140" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
+                                <connections>
+                                    <action selector="forgotPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="13a-hu-rSb"/>
+                                    <action selector="forgotPasswordWithUnwindSegue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zyk-pC-jnx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcA-30-okO">
                                 <rect key="frame" x="171" y="478" width="72" height="31"/>
@@ -65,6 +69,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                 <connections>
+                                    <action selector="clickLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qvl-eN-cwu"/>
                                     <segue destination="vxE-iK-Php" kind="show" id="s9w-Dh-MgP"/>
                                 </connections>
                             </button>
@@ -72,12 +77,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Login" id="bc1-rS-JHT"/>
+                    <navigationItem key="navigationItem" title="Login" largeTitleDisplayMode="always" id="bc1-rS-JHT"/>
                     <connections>
-                        <outlet property="forgotPassword" destination="1Xb-Oe-ioj" id="TL8-wU-seR"/>
-                        <outlet property="forgotUsername" destination="1Xj-sO-uzp" id="Skd-ii-XLY"/>
-                        <outlet property="usernameTextField" destination="3Ws-Bd-JoT" id="3wC-7H-Xas"/>
-                        <segue destination="vxE-iK-Php" kind="show" id="WI3-Sh-T0N"/>
+                        <outlet property="forgotPassword" destination="1Xb-Oe-ioj" id="I4h-GV-Gt5"/>
+                        <outlet property="forgotUsername" destination="1Xj-sO-uzp" id="qhY-Id-HwF"/>
+                        <outlet property="usernameTextField" destination="3Ws-Bd-JoT" id="ZyD-pi-TCP"/>
+                        <segue destination="vxE-iK-Php" kind="show" identifier="ForgottenUsernameOrPassword" id="WI3-Sh-T0N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -102,7 +107,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="s9w-Dh-MgP"/>
+        <segue reference="WI3-Sh-T0N"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemGrayColor">

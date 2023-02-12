@@ -25,18 +25,25 @@ class ViewController: UIViewController {
     
     @IBOutlet var forgotUsername: UIButton!
     
-    @IBAction func forgotUsername(unwindSegue: UIStoryboardSegue) {
+    @IBAction func forgotUsername(_ sender: Any) {
+        performSegue(withIdentifier: "ForgottenUsernameOrPassword", sender: sender)
         
     }
     
-    @IBAction func forgotPassword(unwindSegue: UIStoryboardSegue) {
+    @IBAction func forgotPassword(_ sender: Any) {
+        performSegue(withIdentifier: "ForgottenUsernameOrPassword", sender: sender)
     }
     
   
     
+    @IBAction func clickLogin(_ sender: Any) {
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
      segue.destination.navigationItem.title = usernameTextField.text
+        
+        
         
         guard let sender = sender as? UIButton else {return}
          
@@ -47,7 +54,7 @@ class ViewController: UIViewController {
          } else {
             segue.destination.navigationItem.title = usernameTextField.text
          }
-        
+       
     }
     
 }
